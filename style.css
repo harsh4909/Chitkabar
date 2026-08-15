@@ -1,1 +1,875 @@
+/* ================================
+   GENERAL SETTINGS
+================================ */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #242424;
+    background: #fffdf9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header {
+    background: #fffdf9;
+    border-bottom: 1px solid #eee8df;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #472d20;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a56b3f;
+}
+
+.cart {
+    border: 1px solid #d8c8b9;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 620px;
+    padding: 80px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.small-heading {
+    color: #a56b3f;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 75px);
+    line-height: 1.05;
+    color: #38241a;
+}
+
+.hero h1 span {
+    display: block;
+    color: #a56b3f;
+}
+
+.hero-text {
+    color: #70675f;
+    margin-top: 25px;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: #472d20;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #6a4530;
+}
+
+.secondary-btn {
+    border: 1px solid #cbbbab;
+    color: #472d20;
+}
+
+
+/* ================================
+   HERO BOOKS
+================================ */
+
+.hero-books {
+    position: relative;
+    width: 440px;
+    height: 390px;
+}
+
+.book-cover {
+    position: absolute;
+    width: 170px;
+    height: 250px;
+
+    border-radius: 4px;
+    box-shadow: 12px 15px 30px rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.book-cover div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.book-cover small {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.book-cover strong {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    line-height: 1;
+}
+
+.book-one {
+    background: #713f2a;
+    transform: rotate(-10deg);
+    left: 30px;
+    top: 65px;
+}
+
+.book-two {
+    background: #b17b52;
+    transform: rotate(4deg);
+    left: 145px;
+    top: 20px;
+    z-index: 2;
+}
+
+.book-three {
+    background: #303d42;
+    transform: rotate(12deg);
+    left: 250px;
+    top: 75px;
+    z-index: 1;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+    background: #f5eee6;
+    padding: 30px 25px;
+
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.feature-icon {
+    font-size: 28px;
+}
+
+.feature h3 {
+    font-size: 14px;
+}
+
+.feature p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ================================
+   SECTION HEADING
+================================ */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p,
+.section-label {
+    color: #a56b3f;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #38241a;
+    margin-top: 5px;
+}
+
+
+/* ================================
+   CATEGORIES
+================================ */
+
+.categories-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    border: 1px solid #eee5dc;
+    border-radius: 12px;
+    padding: 30px 15px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.category-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 15px;
+}
+
+.category-card p {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* ================================
+   BOOKS SECTION
+================================ */
+
+.books-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 25px 100px;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.section-heading.left {
+    text-align: left;
+    margin: 0;
+}
+
+.search-box {
+    background: white;
+    border: 1px solid #ddd2c7;
+    padding: 10px 15px;
+    border-radius: 30px;
+    width: 250px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 200px;
+    margin-left: 5px;
+}
+
+
+/* ================================
+   BOOK CARDS
+================================ */
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee6dd;
+
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.book-image {
+    height: 300px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-1 {
+    background: #e7d2bd;
+}
+
+.image-2 {
+    background: #d8c6bc;
+}
+
+.image-3 {
+    background: #c8d0ca;
+}
+
+.image-4 {
+    background: #c9c1b3;
+}
+
+.fake-book {
+    width: 145px;
+    height: 215px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+    box-shadow: 8px 10px 20px rgba(0,0,0,0.2);
+}
+
+.image-1 .fake-book {
+    background: #7b432d;
+}
+
+.image-2 .fake-book {
+    background: #4c5960;
+}
+
+.image-3 .fake-book {
+    background: #506b59;
+}
+
+.image-4 .fake-book {
+    background: #574c43;
+}
+
+.fake-book small {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.fake-book strong {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    line-height: 1.05;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: #472d20;
+    color: white;
+
+    font-size: 9px;
+    padding: 5px 10px;
+    border-radius: 15px;
+
+    letter-spacing: 1px;
+}
+
+.book-details {
+    padding: 20px;
+}
+
+.book-category {
+    color: #a56b3f;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.book-details h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.rating {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.rating span {
+    color: #999;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.price span {
+    color: #999;
+    font-size: 13px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.book-details button {
+    width: 100%;
+    border: none;
+    background: #472d20;
+    color: white;
+    padding: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-details button:hover {
+    background: #a56b3f;
+}
+
+
+/* ================================
+   OFFER
+================================ */
+
+.offer {
+    background: #472d20;
+    color: white;
+    text-align: center;
+    padding: 80px 25px;
+}
+
+.offer-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.offer p:first-child {
+    color: #d9b99b;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.offer h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.offer h3 {
+    font-size: 25px;
+    color: #e0b58f;
+}
+
+.offer p {
+    margin: 15px 0 25px;
+    color: #d8ccc4;
+}
+
+.offer-button {
+    display: inline-block;
+    background: white;
+    color: #472d20;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 43px;
+    line-height: 1.15;
+    margin: 12px 0 20px;
+}
+
+.about h2 span {
+    color: #a56b3f;
+}
+
+.about-content > p:not(.section-label) {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.about-statistics {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-statistics div {
+    text-align: center;
+}
+
+.about-statistics strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    color: #472d20;
+}
+
+.about-statistics span {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* ================================
+   NEWSLETTER
+================================ */
+
+.newsletter {
+    background: #f5eee6;
+    padding: 60px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.newsletter p {
+    color: #a56b3f;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.newsletter h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+.newsletter form {
+    display: flex;
+}
+
+.newsletter input {
+    width: 280px;
+    padding: 14px 18px;
+    border: 1px solid #d5c5b7;
+    outline: none;
+    border-radius: 30px 0 0 30px;
+}
+
+.newsletter button {
+    border: none;
+    background: #472d20;
+    color: white;
+    padding: 0 22px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #241811;
+    color: white;
+    padding: 60px 25px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.footer-brand p {
+    color: #aaa;
+    margin-top: 10px;
+    max-width: 280px;
+}
+
+.footer-content h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.copyright {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #493b32;
+
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-top {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-statistics {
+        justify-content: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .cart {
+        padding: 7px 12px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-books {
+        transform: scale(0.75);
+        margin-top: -30px;
+    }
+
+    .features {
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: calc(100% - 35px);
+    }
+
+    .offer h2 {
+        font-size: 36px;
+    }
+
+    .newsletter form {
+        width: 100%;
+    }
+
+    .newsletter input {
+        width: 65%;
+    }
+
+    .newsletter button {
+        width: 35%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+  }
